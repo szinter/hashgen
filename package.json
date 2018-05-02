@@ -1,0 +1,18 @@
+{
+    "name": "passgen",
+    "version": "1.0.0",
+    "main": "main.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "mocha",
+        "start": "node main.js"
+    },
+    "author": "galat",
+    "contributors": [],
+    "dependencies": {},
+    "devDependencies": {
+        "chai": "^4.1.2"
+    }
+}
