@@ -1,15 +1,36 @@
+const { generateCombination, mixCombination, getPassFromCombination } = require('./combinationService');
+
+const combinationSegments = [];
+
 class Passgen {
-    withNumbers() {}
+    withNumbers() {
+        return this;
+    }
 
-    withUppercase() {}
+    withUppercase() {
+        return this;
+    }
 
-    withLowercase() {}
+    withLowercase() {
+        return this;
+    }
 
-    withSpecial() {}
+    withSpecial() {
+        return this;
+    }
 
-    withLength() {}
+    withLength() {
+        return this;
+    }
 
-    generate() {}
+    generate() {
+        const combination = generateCombination(combinationSegments);
+        const mixedCombination = mixCombination(combination);
+
+        const pass = getPassFromCombination(mixedCombination);
+
+        return pass;
+    }
 };
 
 module.exports = Passgen;
