@@ -1,11 +1,11 @@
-const Passgen = require('./passgen');
+const { Passgen } = require('./passgen');
 
 const passgen = new Passgen();
 
 const pass = passgen.withNumbers()
                     .withUppercase()
                     .withLowercase()
-                    .withSpecial(['@', '&', '#', '_', '-'])
+                    .withSpecial()
                     .withLength(17)
                     .generate();
 

@@ -1,0 +1,1 @@
+require('./segmentProviderFactory.test');
