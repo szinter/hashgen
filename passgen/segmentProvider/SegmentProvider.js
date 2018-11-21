@@ -1,12 +1,10 @@
-let returnable;
-
 class SegmentProvider {
     constructor(segment) {
-        returnable = segment;
+        this.returnable = segment;
     }
 
     getSegment() {
-        return returnable;
+        return this.returnable;
     }
 }
 

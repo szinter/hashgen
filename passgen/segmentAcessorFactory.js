@@ -1,0 +1,3 @@
+class SegmentAcessorFactory {
+    constructor() {}
+}

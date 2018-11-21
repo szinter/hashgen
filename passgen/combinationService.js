@@ -4,9 +4,9 @@ const deepEqual = require('fast-deep-equal');
 function generateCombination(combinationSegments) {
     const combination = [];
 
-    combinationSegments.map(segmentAccessor => {
-        combination.push(segmentAccessor());
-    });
+    for (let i = 0;i < combinationSegments.length; i++) {
+        combination.push(combinationSegments[i].getSegment());
+    }
 
     return combination;
 }
@@ -21,12 +21,13 @@ function mixCombination(combination) {
     while(deepEqual(combination, shuffledCombination)) {
         shuffle(shuffledCombination);
     }
-
-    return shuffle(shuffledCombination);
+    const shuffled = shuffle(shuffledCombination);
+    return shuffled;
 }
 
 function getPassFromCombination(combination = []) {
-    return combination.join('');
+    const conbinationnn = combination.join('');
+    return conbinationnn;
 }
 
 module.exports = {

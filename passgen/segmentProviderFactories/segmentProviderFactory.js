@@ -1,3 +1,5 @@
+const {SegmentProvider} = require('../segmentProvider');
+
 class SegmentProviderFactory {
     constructor() {
         if (this.constructor == SegmentProviderFactory) {
@@ -6,8 +8,12 @@ class SegmentProviderFactory {
     }
 
     create() {
-
+        const index = Math.round(Math.random() * this.setOfReturnables.length - 1);
+        const segment = this.setOfReturnables[index];
+        return new SegmentProvider(segment);
     }
 }
 
-module.exports = SegmentProviderFactory;
+module.exports = {
+    SegmentProviderFactory
+}
