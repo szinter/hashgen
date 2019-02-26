@@ -12,6 +12,7 @@
     "author": "galat",
     "contributors": [],
     "dependencies": {
+        "@sentry/node": "^4.6.3",
         "shuffle-array": "^1.0.1"
     },
     "devDependencies": {
