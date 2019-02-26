@@ -18,4 +18,4 @@ for (let i = 0; i < ITERATIONS; i++) {
     console.log(pass.generate());
 }
 
-throw 'Oh no we have an NEW error'
+throw 'Oh no we have an NEW NEW error'
