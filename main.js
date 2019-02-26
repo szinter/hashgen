@@ -2,8 +2,7 @@ const { Passgen } = require('./passgen');
 const Sentry = require('@sentry/node');
 
 Sentry.init({
-    dsn: 'https://d373da4f59714d0db5b1f832d32dc323@sentry.io/1403188',
-    release: 'hashgen@0.1.2'
+    dsn: 'https://d373da4f59714d0db5b1f832d32dc323@sentry.io/1403188'
 });
 
 const passgen = new Passgen();
@@ -18,3 +17,5 @@ const pass = passgen.withNumbers(14)
 for (let i = 0; i < ITERATIONS; i++) {
     console.log(pass.generate());
 }
+
+throw 'Oh no we have an error'
